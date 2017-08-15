@@ -1,9 +1,9 @@
-# simple-react-app
-Simple base app with react, react-router v4, hot-reload &amp; sass.
+# simple-redux-app
+Simple base app with react, redux, react-router v4, hot-reload &amp; sass.
 
 ## What is this
-This is a base project that you can use to jumpstart your react apps.
-It includes the last react spec as of today 22/05/2017, and uses react-router v4 to handle routes.
+This is a base project that you can use to jumpstart your react & redux apps.
+It includes the last react & redux spec as of today 22/05/2017, and uses react-router v4 to handle routes.
 Style is handles by sass/scss.
 nb: this is just front end, you can use whatever backend language you are most confortable with.
 
