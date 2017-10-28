@@ -5,7 +5,7 @@
 
 // react deps
 import React from 'react';
-import { unmountComponentAtNode, render } from 'react-dom';
+import ReactDOM from 'react-dom';
 // redux deps
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
@@ -27,13 +27,20 @@ const store = createStore(
 
 const root = document.getElementById('root');
 
-render(
-  <AppContainer>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </AppContainer>,
-  root,
-);
+const render = (Component) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Provider store={store}>
+        <Component />
+      </Provider>
+    </AppContainer>,
+    root,
+  );
+};
 
-if (module.hot) module.hot.accept(App, () => { unmountComponentAtNode(root); render(App); });
+render(App);
+
+if (module.hot) {
+  module.hot.accept('./App', () => { render(App); });
+  module.hot.accept('./reducers', () => { store.replaceReducer(reducer); });
+}
