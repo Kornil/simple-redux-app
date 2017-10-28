@@ -1,20 +1,25 @@
 /* eslint-disable import/no-extraneous-dependencies */
-/* issue with redux-logger and react-hot-loader
-   even tho those 2 deps are only used in development
-   eslint has no way to tell that and outputs an error */
+/*
+  issue with redux-logger and react-hot-loader
+  even tho those 2 deps are only used in development
+  eslint has no way to tell that and outputs an error
+*/
 
 // react deps
 import React from 'react';
 import ReactDOM from 'react-dom';
+// hot reload for development
+import { AppContainer } from 'react-hot-loader';
+
 // redux deps
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-// hot reload for development
-import { AppContainer } from 'react-hot-loader';
+
 import reducer from './reducers';
 import App from './App';
+
 import './style.scss';
 
 const middleware = [thunk];
