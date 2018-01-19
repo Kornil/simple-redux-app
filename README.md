@@ -3,7 +3,7 @@ Simple base app with react, redux, react-router v4, hot-reload &amp; sass.
 
 ## What is this
 This is a base project that you can use to jumpstart your react & redux apps.
-It includes the last react & redux spec as of today 22/05/2017, and uses react-router v4 to handle routes.
+It includes the last react & redux spec as of today 19/01/2018, and uses react-router v4 to handle routes.
 Style is handles by sass/scss.
 nb: this is just front end, you can use whatever backend language you are most confortable with.
 
@@ -30,7 +30,10 @@ n stable
 and now you have the latest stable version of node&npm.
 
 
-`yarn install`/`npm install` to install all the dependencies.
+`npm i -g simple-redux-app` to install this package globally, from there you will be able to jumpstart as many boilerplates as you wish.
+
+
+`simple-redux-app folderName` to create a react boilerplate on the `folderName` folder. By default all dependencies are already installed, just `cd folderName` and start hacking.
 
 
 `yarn start`/`npm start` to start dev server with hot reload, it's live on `localhost:3000`.
