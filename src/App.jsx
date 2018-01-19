@@ -1,13 +1,10 @@
 import React from 'react';
 import {
-  HashRouter,
-  Route,
+  BrowserRouter,
   Link,
-  Switch,
 } from 'react-router-dom';
 
-import Home from './containers/Home';
-import About from './containers/About';
+import Routes from './Routes';
 
 import reactLogo from './assets/React-icon.png';
 
@@ -16,7 +13,7 @@ import reactLogo from './assets/React-icon.png';
  * @return {Component} react base component
  */
 const App = () => (
-  <HashRouter>
+  <BrowserRouter>
     <main className="container">
       <div>
         <h1>hello world!</h1>
@@ -27,12 +24,9 @@ const App = () => (
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
       </ul>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-      </Switch>
+      <Routes />
     </main>
-  </HashRouter>
+  </BrowserRouter>
 );
 
 export default App;
